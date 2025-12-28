@@ -1,0 +1,6 @@
+[submodule "submodule/p51Auth"]
+	path = submodule/p51Auth
+	url = git@github.com:u1tym/p51Auth.git
+[submodule "submodule/p52Menu"]
+	path = submodule/p52Menu
+	url = git@github.com:u1tym/p52Menu.git
