@@ -1,0 +1,5 @@
+git submodule add git@github.com:u1tym/p91ComPython.git comlibs
+git submodule add git@github.com:u1tym/p51Auth.git submodule/p51Auth
+git submodule add git@github.com:u1tym/p52Menu.git submodule/p52Menu
+git submodule init
+git submodule update

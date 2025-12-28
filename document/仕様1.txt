@@ -1,0 +1,13 @@
+Bashのスクリプト作成
+
+build.bash
+
+list.txtを読み込んで、各行の値 line 毎に以下を実行
+
+submodule/<line>/models/ 下の__init__.py以外の*.py を models/ 下にコピー
+submodule/<line>/routers/ 下の__init__.py以外の*.py を routers/ 下にコピー
+submodule/<line>/services/ 下の__init__.py以外の*.py を services/ 下にコピー
+
+
+各 submodule/<line>/requirements.txt を読み込んで、重複なしにして、./ に作成
+
