@@ -5,6 +5,7 @@ FastAPIアプリケーション（認証API + Menu API 統合版）
 """
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from routers import auth, menu
 
 # ポート番号を外出し
@@ -15,6 +16,15 @@ app = FastAPI(
     title="統合API",
     description="認証API と Menu管理API を統合したWeb API",
     version="1.0.0"
+)
+
+# CORSミドルウェアを追加
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # フロントエンドのオリジン
+    allow_credentials=True,
+    allow_methods=["*"],  # すべてのHTTPメソッドを許可
+    allow_headers=["*"],  # すべてのヘッダーを許可
 )
 
 # ルーターを登録
