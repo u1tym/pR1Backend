@@ -38,4 +38,5 @@ async def root() -> dict[str, str]:
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=API_PORT)
+    # IPv6でも動作するように設定（::はIPv6の全インターフェース、多くのシステムでIPv4も処理可能）
+    uvicorn.run(app, host="::", port=API_PORT)
